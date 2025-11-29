@@ -1,11 +1,13 @@
 package com.todo.backend_todo.entity;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "todo")
+@JsonPropertyOrder({"id", "taskName", "completed", "createdAt", "updatedAt"})
 public class Task {
 
     @Id
